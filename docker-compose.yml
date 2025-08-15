@@ -15,7 +15,7 @@ services:
             - hadoop_namenode:/hadoop/dfs/name
             - ./data:/data
             - ./jobs:/jobs
-            - ./hadoop_config:/opt/hadoop/etc/hadoop
+            - ./output:/output
         networks:
             - hadoop
 
@@ -31,7 +31,7 @@ services:
             - hadoop_datanode1:/hadoop/dfs/data
             - ./data:/data
             - ./jobs:/jobs
-            - ./hadoop_config:/opt/hadoop/etc/hadoop
+            - ./output:/output
         networks:
             - hadoop
 
@@ -47,7 +47,7 @@ services:
             - hadoop_datanode2:/hadoop/dfs/data
             - ./data:/data
             - ./jobs:/jobs
-            - ./hadoop_config:/opt/hadoop/etc/hadoop
+            - ./output:/output
         networks:
             - hadoop
 
@@ -63,8 +63,6 @@ services:
             - YARN_CONF_yarn_nodemanager_remote___app___log___dir=/app-logs
         ports:
             - '8088:8088'
-        volumes:
-            - ./hadoop_config:/opt/hadoop/etc/hadoop
         networks:
             - hadoop
 
@@ -75,8 +73,6 @@ services:
         environment:
             - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
             - SERVICE_PRECONDITION=namenode:9000 resourcemanager:8088
-        volumes:
-            - ./hadoop_config:/opt/hadoop/etc/hadoop
         networks:
             - hadoop
 
@@ -89,8 +85,6 @@ services:
             - SERVICE_PRECONDITION=namenode:9000 resourcemanager:8088
         ports:
             - '8188:8188'
-        volumes:
-            - ./hadoop_config:/opt/hadoop/etc/hadoop
         networks:
             - hadoop
 

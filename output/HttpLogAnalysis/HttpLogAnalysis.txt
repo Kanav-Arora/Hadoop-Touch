@@ -1,0 +1,14 @@
+200	11330
+2017]	7
+2018]	28
+206	52
+302	3498
+304	658
+404	251
+Aborted	4
+Assertion	4
+No	167
+Segmentation	1
+Staus	1
+dumped	5
+found	2

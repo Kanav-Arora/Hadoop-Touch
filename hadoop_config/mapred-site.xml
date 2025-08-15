@@ -1,8 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <configuration>
     <property>
         <name>mapreduce.framework.name</name>
         <value>yarn</value>
     </property>
+
     <property>
         <name>mapreduce.jobhistory.address</name>
         <value>historyserver:10020</value>
@@ -11,4 +14,10 @@
         <name>mapreduce.jobhistory.webapp.address</name>
         <value>historyserver:19888</value>
     </property>
+
+    <property>
+        <name>yarn.nodemanager.bind-host</name>
+        <value>0.0.0.0</value>
+    </property>
 </configuration>
+

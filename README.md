@@ -3,14 +3,13 @@
 This repository is a hands-on exploration of **Hadoop architecture**, **MapReduce programming model**, and **data processing with both Java and Python**.  
 It uses a **Docker-based Hadoop cluster** (with YARN, HDFS, and MapReduce) so you can quickly run, test, and extend exercises without manual setup.
 
+## Hands-On Task
 
-## Jobs
-
-
-### 1. Word Count
-The classic MapReduce program that counts the frequency of each word in a given dataset.  
-Implemented in:
-- **Java** (`jobs/WordCount/java/WordCount.java`)
+| Exercise Name         | Topics Learned                                                                                         | Code |
+| --------------------- | ------------------------------------------------------------------------------------------------------ | --------- |
+| **WordCount**         | - Hadoop MapReduce basics<br>- Working with `Text` & `IntWritable`<br>- Mapper-Reducer flow, HDFS integration| [Word Count](./jobs/WordCount/) |
+| **HTTP Log Analysis** | - Field extraction from logs<br>- Filtering relevant information, using Combiners, optimizing MapReduce jobs | [HTTP Log Analysis](./jobs/HttpLogAnalysis/) |
+| **HTTP Log Analysis** | - Multi-stage MapReduce<br>- Data cleaning<br>- File format conversion and compression<br>- Combiner optimizations<br>- Custom partitioners<br>- Multiple MapReduce jobs chaining | [File]() |
 
 
 ## Quick Start
@@ -40,7 +39,7 @@ docker exec -it namenode bash
 ```
 
 
-## Running a Hadoop Job
+### 4. Running a Hadoop Job
 
 Once inside the NameNode container, use the following command pattern:
 
